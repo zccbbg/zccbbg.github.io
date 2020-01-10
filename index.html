@@ -388,12 +388,34 @@
                 
               
 
-              <time title="创建时间：2020-01-10 14:02:24" itemprop="dateCreated datePublished" datetime="2020-01-10T14:02:24+08:00">2020-01-10</time>
+              <time title="创建时间：2020-01-10 14:02:24 / 修改时间：14:55:08" itemprop="dateCreated datePublished" datetime="2020-01-10T14:02:24+08:00">2020-01-10</time>
             
 
+            
+              
+
+              
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -434,8 +456,10 @@
       
         
           
-          
-          
+          最近出现java程序突然挂了的情况，查看日志发现是内存突然暴增导致，于是使用jmap分析。
+-histojmap -histo 1234 查找进程号为1234的java程序的jvm堆中对象详细占用情况，我们一般加上head -20查看前20的占用1jmap -histo 1234|head -20
+
+          ...
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2020/01/10/jmap分析java内存使用/#more" rel="contents">

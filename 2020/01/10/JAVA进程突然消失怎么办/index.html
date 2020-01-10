@@ -116,7 +116,7 @@
 <meta property="og:site_name" content="诚与乐博客">
 <meta property="og:description" content="linux中java进程突然被干掉了，有以下三种情况：linux的OOM killer杀死JVM自身故障jvm的OOM导致进程退出 linux的OOM killerLinux 内核有个机制叫OOM killer（Out-Of-Memory killer），该机制会监控那些占用内存过大，尤其是瞬间很快消耗大量内存的进程，为了防止内存耗尽而内核会把该进程杀掉。 因此，你发现java进程突然没了，首先要">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-01-10T03:11:26.989Z">
+<meta property="og:updated_time" content="2020-01-10T07:21:56.469Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JAVA进程突然消失怎么办">
 <meta name="twitter:description" content="linux中java进程突然被干掉了，有以下三种情况：linux的OOM killer杀死JVM自身故障jvm的OOM导致进程退出 linux的OOM killerLinux 内核有个机制叫OOM killer（Out-Of-Memory killer），该机制会监控那些占用内存过大，尤其是瞬间很快消耗大量内存的进程，为了防止内存耗尽而内核会把该进程杀掉。 因此，你发现java进程突然没了，首先要">
@@ -384,7 +384,7 @@
                 
               
 
-              <time title="创建时间：2020-01-10 10:46:04 / 修改时间：11:11:26" itemprop="dateCreated datePublished" datetime="2020-01-10T10:46:04+08:00">2020-01-10</time>
+              <time title="创建时间：2020-01-10 10:46:04 / 修改时间：15:21:56" itemprop="dateCreated datePublished" datetime="2020-01-10T10:46:04+08:00">2020-01-10</time>
             
 
             
@@ -453,8 +453,15 @@
         <h1 id="linux中java进程突然被干掉了，有以下三种情况："><a href="#linux中java进程突然被干掉了，有以下三种情况：" class="headerlink" title="linux中java进程突然被干掉了，有以下三种情况："></a>linux中java进程突然被干掉了，有以下三种情况：</h1><p>linux的OOM killer杀死<br>JVM自身故障<br>jvm的OOM导致进程退出</p>
 <h1 id="linux的OOM-killer"><a href="#linux的OOM-killer" class="headerlink" title="linux的OOM killer"></a>linux的OOM killer</h1><p>Linux 内核有个机制叫OOM killer（Out-Of-Memory killer），该机制会监控那些占用内存过大，尤其是瞬间很快消耗大量内存的进程，为了防止内存耗尽而内核会把该进程杀掉。 因此，你发现java进程突然没了，首先要怀疑是不是被linux的OOM killer给干掉了！</p>
 <p>你可以去下面这个文件里翻</p>
-<p>系统报错日志:/var/log/messages<br>你执行命令</p>
-<p>···<br>egrep -i ‘killed process’ /var/log/messages<br>···</p>
+<p>系统报错日志:/var/log/messages,可以通过以下命令查看日志</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">egrep -i &apos;killed process&apos; /var/log/messages</span><br></pre></td></tr></table></figure>
+<h1 id="JVM自身故障"><a href="#JVM自身故障" class="headerlink" title="JVM自身故障"></a>JVM自身故障</h1><p>JVM自身故障的情况暂时没遇到，网上看当JVM发生致命错误导致崩溃时，会生成一个hs_err_pid_xxx.log这样的文件，该文件包含了导致 JVM crash 的重要信息，我们可以通过分析该文件定位到导致 JVM Crash 的原因，从而修复保证系统稳定。 默认情况下，该文件是生成在工作目录下的，当然也可以通过 JVM 参数指定生成路径：</p>
+<blockquote>
+<p>-XX:ErrorFile=/var/log/hs_err_pid<pid>.log</pid></p>
+</blockquote>
+<h1 id="JVM的OOM"><a href="#JVM的OOM" class="headerlink" title="JVM的OOM"></a>JVM的OOM</h1><p>导致java进程退出的情况。 因为，一般情况下，出现OOM异常，JVM的GC会进行回收，是不会导致JVM进程退出的。要真说唯一导致退出的情况，那就是内存泄漏，由于内存占用越来越大，结果。 不过这种JVM的OOM导致的异常，很好排查。 因为，你注意两个个参数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-XX:+HeapDumpOnOutOfMemoryError</span><br><span class="line">-XX:HeapDumpPath=*/java.hprof；</span><br></pre></td></tr></table></figure></p>
+<p>然后去找dump快照文件，接下来借助VisualVM这种可视化工具分析就行。很容易定位问题。</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>综上所述，正确回答是。先翻dump文件，dump如果没有，翻hs_err_pid.log日志。如果还没有，翻内核日志。</p>
 
       
     </div>
@@ -861,7 +868,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#linux中java进程突然被干掉了，有以下三种情况："><span class="nav-number">1.</span> <span class="nav-text">linux中java进程突然被干掉了，有以下三种情况：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#linux的OOM-killer"><span class="nav-number">2.</span> <span class="nav-text">linux的OOM killer</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#linux中java进程突然被干掉了，有以下三种情况："><span class="nav-number">1.</span> <span class="nav-text">linux中java进程突然被干掉了，有以下三种情况：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#linux的OOM-killer"><span class="nav-number">2.</span> <span class="nav-text">linux的OOM killer</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JVM自身故障"><span class="nav-number">3.</span> <span class="nav-text">JVM自身故障</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JVM的OOM"><span class="nav-number">4.</span> <span class="nav-text">JVM的OOM</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">5.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
 
           </div>

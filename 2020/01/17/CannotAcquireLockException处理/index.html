@@ -108,24 +108,25 @@
 
 
 
-  <meta name="description" content="平头叔的个人博客">
-<meta name="keywords" content="coding,创业">
-<meta property="og:type" content="website">
-<meta property="og:title" content="诚与乐博客">
-<meta property="og:url" content="http://zccbbg.top/tags/mysql/index.html">
+  <meta name="description" content="问题描述最近项目里面频繁报：CannotAcquireLockException1org.springframework.dao.CannotAcquireLockException: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.LockAcquisitionExceptio">
+<meta name="keywords" content="mysql,springboot,jpa">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CannotAcquireLockException处理">
+<meta property="og:url" content="http://zccbbg.top/2020/01/17/CannotAcquireLockException处理/index.html">
 <meta property="og:site_name" content="诚与乐博客">
-<meta property="og:description" content="平头叔的个人博客">
+<meta property="og:description" content="问题描述最近项目里面频繁报：CannotAcquireLockException1org.springframework.dao.CannotAcquireLockException: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.LockAcquisitionExceptio">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-01-17T07:59:49.946Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="诚与乐博客">
-<meta name="twitter:description" content="平头叔的个人博客">
+<meta name="twitter:title" content="CannotAcquireLockException处理">
+<meta name="twitter:description" content="问题描述最近项目里面频繁报：CannotAcquireLockException1org.springframework.dao.CannotAcquireLockException: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.LockAcquisitionExceptio">
 
 
 
 
 
 
-  <link rel="canonical" href="http://zccbbg.top/tags/mysql/"/>
+  <link rel="canonical" href="http://zccbbg.top/2020/01/17/CannotAcquireLockException处理/"/>
 
 
 
@@ -135,7 +136,7 @@
   };
 </script>
 
-  <title>标签: mysql | 诚与乐博客</title>
+  <title>CannotAcquireLockException处理 | 诚与乐博客</title>
   
 
 
@@ -192,7 +193,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -241,7 +242,7 @@
         
         
           
-          <li class="menu-item menu-item-tags menu-item-active">
+          <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
   </li>
@@ -321,221 +322,266 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block tag">
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h2>mysql<small>标签</small>
-        </h2>
-      </div>
-
-      
-        
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zccbbg.top/2020/01/17/CannotAcquireLockException处理/">
 
-      <h3 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="平头叔">
+      <meta itemprop="description" content="平头叔的个人博客">
+      <meta itemprop="image" content="/images/avatar/dashu.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="诚与乐博客">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2020/01/17/CannotAcquireLockException处理/" itemprop="url">
-              
-                <span itemprop="name">CannotAcquireLockException处理</span>
-              
-            </a>
         
-      </h3>
+          <h2 class="post-title" itemprop="name headline">CannotAcquireLockException处理
+              
+            
+          </h2>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-01-17T10:57:36+08:00"
-              content="2020-01-17" >
-          01-17
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
 
-    </header>
-  </article>
+            
+            
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2020-01-17 10:57:36 / 修改时间：15:59:49" itemprop="dateCreated datePublished" datetime="2020-01-17T10:57:36+08:00">2020-01-17</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/jpa/" itemprop="url" rel="index"><span itemprop="name">jpa</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2020/01/17/CannotAcquireLockException处理/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2020/01/17/CannotAcquireLockException处理/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2019/11/13/mysql-FROM-UNIXTIME-返回-null/" itemprop="url">
-              
-                <span itemprop="name">mysql FROM_UNIXTIME 返回 null</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-11-13T17:24:10+08:00"
-              content="2019-11-13" >
-          11-13
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
 
       
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2019/09/24/MySQL数据库，分区测试/" itemprop="url">
-              
-                <span itemprop="name">MySQL数据库，分区测试</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-09-24T09:45:33+08:00"
-              content="2019-09-24" >
-          09-24
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2019/09/24/死锁发生的条件/" itemprop="url">
-              
-                <span itemprop="name">死锁发生的条件</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-09-24T09:38:25+08:00"
-              content="2019-09-24" >
-          09-24
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2019/09/23/Mysql批量删除的一些经验/" itemprop="url">
-              
-                <span itemprop="name">Mysql批量删除的一些经验</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-09-23T09:52:47+08:00"
-              content="2019-09-23" >
-          09-23
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2019/01/10/Navicat处理mysql死锁/" itemprop="url">
-              
-                <span itemprop="name">Navicat处理mysql死锁</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-01-10T17:28:03+08:00"
-              content="2019-01-10" >
-          01-10
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+        <h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>最近项目里面频繁报：CannotAcquireLockException<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">org.springframework.dao.CannotAcquireLockException: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.LockAcquisitionException: could not execute statement</span><br></pre></td></tr></table></figure></p>
+<h1 id="原因分析"><a href="#原因分析" class="headerlink" title="原因分析"></a>原因分析</h1><p>CannotAcquireLockException基本上是死锁导致的，需要查看数据库死锁的原因</p>
+<h1 id="死锁发生的条件："><a href="#死锁发生的条件：" class="headerlink" title="死锁发生的条件："></a>死锁发生的条件：</h1><p>1、资源不能共享，需要只能由一个进程或者线程使用<br>2、请求且保持，已经锁定的资源自给保持着不释放<br>3、不剥夺，自给申请到的资源不能被别人剥夺<br>4、循环等待</p>
+<h1 id="防止死锁的途径就是避免满足死锁条件的情况发生，适合这个问题解决的方案有"><a href="#防止死锁的途径就是避免满足死锁条件的情况发生，适合这个问题解决的方案有" class="headerlink" title="防止死锁的途径就是避免满足死锁条件的情况发生，适合这个问题解决的方案有:"></a>防止死锁的途径就是避免满足死锁条件的情况发生，适合这个问题解决的方案有:</h1><p>1、保持事务简短并在一个批处理中<br>在同一数据库中并发执行多个需要长时间运行的事务时通常发生死锁。事务运行时间越长，其持有排它锁或更新锁的时间也就越长，从而堵塞了其它活动并可能导致死锁。保持事务在一个批处理中，可以最小化事务的网络通信往返量，减少完成事务可能的延迟并释放锁。<br>2、使用低隔离级别<br>确定事务是否能在更低的隔离级别上运行。执行提交读允许事务读取另一个事务已读取（未修改）的数据，而不必等待第一个事务完成。使用较低的隔离级别（例如提交读）而不使用较高的隔离级别（例如可串行读）可以缩短持有共享锁的时间，从而降低了锁定争夺（比如这次的S NK和X IK 是InnoDB引擎Repeatable Read级别才有的）。</p>
+<h1 id="特别注意"><a href="#特别注意" class="headerlink" title="特别注意"></a>特别注意</h1><p>“insert into tb select * from tbx” 这样的导入操作是会把tbx表给锁住的，在锁期间是不允许任何操作（保证一致性）。<br>MYSQL自增列引起死锁：当innodb_autoinc_lock_mode不为2时，并发插入数据可能会发生死锁。</p>
 
       
     </div>
 
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/mysql/" rel="tag"># mysql</a>
+          
+            <a href="/tags/springboot/" rel="tag"># springboot</a>
+          
+            <a href="/tags/jpa/" rel="tag"># jpa</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div class="social_share">
+            
+               <div>
+                 
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+               </div>
+            
+            
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/01/10/jmap分析java内存使用/" rel="next" title="jmap分析java内存使用">
+                <i class="fa fa-chevron-left"></i> jmap分析java内存使用
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -556,8 +602,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -795,6 +850,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#问题描述"><span class="nav-number">1.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#原因分析"><span class="nav-number">2.</span> <span class="nav-text">原因分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#死锁发生的条件："><span class="nav-number">3.</span> <span class="nav-text">死锁发生的条件：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#防止死锁的途径就是避免满足死锁条件的情况发生，适合这个问题解决的方案有"><span class="nav-number">4.</span> <span class="nav-text">防止死锁的途径就是避免满足死锁条件的情况发生，适合这个问题解决的方案有:</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#特别注意"><span class="nav-number">5.</span> <span class="nav-text">特别注意</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -941,6 +1012,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.3.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.3.0"></script>
+
+
 
   
 
@@ -1353,7 +1428,7 @@
   <script src="/lib/bookmark/bookmark.min.js?v=1.0"></script>
   <script type="text/javascript">
   
-    bookmark.loadBookmark();
+    bookmark.scrollToMark('auto', "#更多");
   
   </script>
 
